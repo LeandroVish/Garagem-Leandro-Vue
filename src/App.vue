@@ -14,6 +14,7 @@ const authStore = useAuthStore();
     <router-link to="/acessorios">Acessórios</router-link> |
     <router-link to="/cores">Cores</router-link> |
     <router-link to="/marcas">Marcas</router-link> |
+    <router-link to="/modelos">Modelos</router-link> |
     <div v-if="authStore.loggedIn">
     <router-link  to="/logout">Logout</router-link> |
       {{ authStore.user.email }}
