@@ -27,4 +27,5 @@ onMounted(() => {
 
 <template>
   <product-list />
+  <h1>Hello Word</h1>
 </template>
