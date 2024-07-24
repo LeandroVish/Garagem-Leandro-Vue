@@ -65,7 +65,7 @@ async function excluir(id) {
             {{ modelo.nome }}
           </option>
         </select>
-        <select v-model="veiculo.acessorio" name="acessorios" id="acessorios">
+        <select v-model="veiculo.acessorio" name="acessorios" id="acessorios" multiple>
           <option :value="acessorio.id" v-for="acessorio in acessorios" :key="acessorio.id">
             {{ acessorio.descricao }}
           </option>
@@ -78,7 +78,7 @@ async function excluir(id) {
         <li v-for="veiculo in veiculos" :key="veiculo.id">
             <span @click="editar(veiculo)">
                 ({{ veiculo.id }}) - {{ veiculo.ano }} - {{ veiculo.preco }} - {{ veiculo.cor }} -
-                {{ veiculo.modelo }} - {{ veiculo.acessorio }}
+                {{ veiculo.modelo }} - {{ veiculo.acessorio.join(', ') }}
             </span>
             <button class="bt-delete" @click="excluir(veiculo.id)">X</button>
         </li>
